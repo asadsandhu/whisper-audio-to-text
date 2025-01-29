@@ -97,7 +97,25 @@ Now, transcribe the audio file with Whisper:
 ```
 
 🔹 **If you uploaded your own file in step 3**, replace `"Sample.mp3"` with **your file name**.  
-🔹 Whisper AI will process the file and display the transcription.  
+🔹 **You can change the model** by replacing `medium` with any of the available Whisper models.  
+
+#### **Available Whisper Models & Their Performance**  
+
+| **Model** | **Size** | **Speed** | **Accuracy** | **Best For** |
+|-----------|---------|----------|--------------|--------------|
+| `tiny`    | 39 MB   | 🚀 Very Fast  | ❌ Low Accuracy  | Quick testing, low-end devices |
+| `base`    | 74 MB   | ⚡ Fast  | 🔸 Moderate Accuracy | Short recordings, general use |
+| `small`   | 244 MB  | ⚡ Moderate  | 🔹 Good Accuracy  | Standard transcription tasks |
+| `medium`  | 769 MB  | ⏳ Slower  | ✅ High Accuracy | Most users, multilingual support |
+| `large`   | 1550 MB | 🕒 Slowest  | 🔥 Best Accuracy | Research, high-quality needs |
+
+🔹 **Larger models provide better accuracy but take longer to process**.  
+🔹 **If speed is a priority**, use `small` or `base`. If accuracy is **more important**, use `medium` or `large`.  
+🔹 **Example: Using the large model**  
+
+```bash
+!whisper "Sample.mp3" --model large
+```
 
 ---
 
